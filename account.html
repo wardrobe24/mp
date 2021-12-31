@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account - Hem&Thread</title>
+    <link rel="stylesheet" href="style.css">
+    <script src= "script.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+       <div class="container">
+          <div class="navbar">
+              <div class="logo">
+                  <a href="index.html"><img src="images/hemm.png.jpeg" width="125px"></a>
+              </div>
+              <nav>
+               <ul id="MenuItems">
+                   <li><a href="index.html">Home</a></li>
+                   <li><a href="products.html">Products</a></li>
+                   
+                   <li><a href="account.html">Signin</a></li>
+               </ul>
+              </nav>
+              <a href="cart.html"><img src="images/cart.png" width="30px" height="30px"></a>
+              <img src="images/menu.png" onclick="menutoggle()" class="menu-icon">
+          </div>
+          
+          
+       </div>
+       
+       
+<!--------------login details--------------->
+<div class="accout-page">
+    <div class="container">
+  
+       <div class="row">
+         
+          <div class="col-2">
+             <img src="images/collage.png" width="75%">
+          </div>
+          
+           <div class="col-2">
+              <div class="form-container">
+                <div id="my-signin2"></div>
+                 <div class="form-btn">
+                     <span onclick="login()">Login</span>
+                     <span onclick="register()">SignUp</span>
+                     <hr id="indicator">
+                 </div>
+                 
+                 <form action="#" id="LoginForm" >
+                    <input type="text"  id="name" placeholder="username">
+                    <input type="password" id="pw" placeholder="Password">
+                    <input type="submit" onclick="loginfunc()" value="Login" class="btn">
+                    <a href="">Forgot password</a>
+                </form>
+ 
+                <form action="#" id="RegForm">
+                    <input type="text" id="uname"" placeholder="username">
+                    <input type="email" id="mail" placeholder="Email">
+                    <input type="password" id="psw" placeholder="Password">
+                    <input type="submit" class="btn" value="SignUp" onclick="signupfunc()" >
+                </form>
+                 </div>
+              </div>
+           </div>
+       </div>
+</div>
+</div>
+
+<!----------Footer---------------> 
+
+<div class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="footer-col1">
+               <h3>Download Our App</h3>
+                <p>Download App for Android and ios mobile phone.</p>
+                <div class="app-logo">
+                    <img src="images/play-store.png">
+                    <img src="images/app-store.png">
+                </div>
+            </div>
+            <div class="footer-col2">
+               <img src="images/hemm.png.jpeg">
+                <p>Our Purpose Is To Sustainably Make the Pleasure and Benefits of Sports Accessible to the Many.</p>
+            </div>
+            <div class="footer-col3">
+               <h3>Useful Links</h3>
+                <ul>
+                    <li>Coupons</li>
+                    <li>Blog Post</li>
+                    <li>Return Policy</li>
+                    <li>Join Affiliate</li>
+                </ul>
+            </div>
+            <div class="footer-col4">
+               <h3>Follow Us</h3>
+                <ul>
+                    <li>Facebook</li>
+                    <li>Twitter<li>
+                    <li>Instagram</li>
+                    <li>YouTube</li>
+                </ul>
+            </div>
+        </div>
+        <hr>
+        <p class="copyright"><a href="https://www.youtube.com/c/Manikanthagada">Copyright 2021 - Hem&Thread</a></p>
+    </div>
+</div>
+
+<!-------------js for toggle menu-------------->
+
+<script>
+    var MenuItems = document.getElementById("MenuItems");
+    
+    MenuItems.style.maxHeight = "0px";
+    
+    function menutoggle()
+    {
+        if(MenuItems.style.maxHeight == "0px")
+            {
+                MenuItems.style.maxHeight = "200px";
+            }else
+            {
+                MenuItems.style.maxHeight = "0px"
+            } 
+    }
+     
+</script>
+<!------------------- form toggle ----------->
+    <script>
+        var Login = document.getElementById("LoginForm");
+        var Signup = document.getElementById("RegForm");
+        var Indicator = document.getElementById("indicator");
+        
+        function register(){
+                Signup.style.transform = "translateX(0px)";
+                Login.style.transform = "translateX(0px)";
+                Indicator.style.transform = "translateX(100px)"
+            };
+        function login(){
+                Signup.style.transform = "translateX(300px)";
+                Login.style.transform = "translateX(300px)";
+                Indicator.style.transform = "translateX(0px)"
+            };
+            
+    </script>
+    
+    
+    
+</body>
+</html>
